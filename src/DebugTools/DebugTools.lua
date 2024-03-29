@@ -214,6 +214,7 @@ end
 
 function DebugTools.filter(tbl, key, value, invert)
 	local res = {}
+	if type(tbl) ~= 'table' then return tbl end
 
 	for k, v in pairs(tbl) do
 		if key ~= nil then
